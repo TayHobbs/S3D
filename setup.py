@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='s3deploy',
-    version='0.0.1',
+    version='0.0.2',
     author="Taylor Hobbs",
     author_email="hobbstay@gmail.com.com",
     description="boto-egg",
