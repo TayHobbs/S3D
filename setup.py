@@ -7,7 +7,7 @@ setup(
     author="Taylor Hobbs",
     author_email="hobbstay@gmail.com.com",
     description="boto-egg",
-    long_description=open('README.rst').read(),
+    long_description=open('README.md').read(),
     url='https://github.com/tayhobbs/',
     packages=find_packages(exclude=['test']),
     install_requires=['boto'],
