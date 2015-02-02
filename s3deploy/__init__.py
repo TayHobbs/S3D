@@ -24,3 +24,10 @@ def upload_files(bucket, source_dir, source_path):
     key = boto.s3.key.Key(bucket)
     key.key = source_path[len(source_dir):] if source_dir in source_path else source_path
     key.set_contents_from_filename(source_path)
+
+
+def delete_bucket_contents(bucket_name, access_key, secret_key):
+    bucket = connect(bucket_name, access_key, secret_key)
+    bucketListResultSet = bucket.list()
+    bucket.delete_keys([key.name for key in bucketListResultSet])
+    print "Bucket contents successfully deleted!"

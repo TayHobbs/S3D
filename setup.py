@@ -14,6 +14,7 @@ setup(
     entry_points={
         'console_scripts': {
             "s3deploy = s3deploy.script:upload",
+            "s3delete = s3deploy.script:delete",
         },
     },
 )
