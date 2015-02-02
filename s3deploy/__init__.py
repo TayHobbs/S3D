@@ -15,11 +15,6 @@ def process_files(bucket_name, access_key, secret_key, source_dir):
             upload_files(bucket, source_dir, source_path)
 
 
-def connect(bucket_name, access_key, secret_key):
-    connection = boto.connect_s3(access_key, secret_key)
-    return connection.create_bucket(bucket_name, location=boto.s3.connection.Location.DEFAULT)
-
-
 def upload_files(bucket, source_dir, source_path):
     key = boto.s3.key.Key(bucket)
     key.key = source_path[len(source_dir):] if source_dir in source_path else source_path
@@ -31,3 +26,8 @@ def delete_bucket_contents(bucket_name, access_key, secret_key):
     bucketListResultSet = bucket.list()
     bucket.delete_keys([key.name for key in bucketListResultSet])
     print "Bucket contents successfully deleted!"
+
+
+def connect(bucket_name, access_key, secret_key):
+    connection = boto.connect_s3(access_key, secret_key)
+    return connection.create_bucket(bucket_name, location=boto.s3.connection.Location.DEFAULT)
