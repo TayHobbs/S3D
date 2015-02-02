@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='boto-egg',
+    name='s3deploy',
     version='0.0.1',
     author="Taylor Hobbs",
     author_email="hobbstay@gmail.com.com",
@@ -13,7 +13,7 @@ setup(
     install_requires=['boto'],
     entry_points={
         'console_scripts': {
-            "upload = boto_egg.script:boto_egg",
+            "s3deploy = s3deploy.script:upload",
         },
     },
 )
