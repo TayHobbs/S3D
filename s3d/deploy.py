@@ -21,3 +21,9 @@ def upload_files(bucket, source_dir, source_path):
     key = boto.s3.key.Key(bucket)
     key.key = source_path[len(source_dir):] if source_dir in source_path else source_path
     key.set_contents_from_filename(source_path)
+
+
+def make_bucket_public(bucket_name, access_key, secret_key):
+    bucket = connect(bucket_name, access_key, secret_key)
+    bucket.set_acl('public-read')
+    print 'Bucket made public!'

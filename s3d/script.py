@@ -1,5 +1,5 @@
 import argparse
-from s3d.deploy import process_files
+from s3d.deploy import process_files, make_bucket_public
 from s3d.delete import delete_bucket_contents
 
 
@@ -21,3 +21,8 @@ def upload():
 def delete():
     args = parser.parse_args()
     delete_bucket_contents(args.bucket, args.access_key, args.secret_key)
+
+
+def public():
+    args = parser.parse_args()
+    make_bucket_public(args.bucket, args.access_key, args.secret_key)

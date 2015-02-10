@@ -67,3 +67,15 @@ Example usage of s3delete:
 ::
 
     s3delete -b bucket-name -a aws-access-key -s aws-secret-key
+
+
+Public
+------
+
+You can also add a policy to your bucket to make it public.
+
+Pass your credentials and the name of your bucket.
+
+::
+
+    s3public -b bucket-name -a aws-access-key -s aws-secret-key

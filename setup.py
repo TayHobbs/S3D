@@ -15,6 +15,7 @@ setup(
         'console_scripts': {
             's3deploy = s3d.script:upload',
             's3delete = s3d.script:delete',
+            's3public = s3d.script:public',
         },
     },
 )
