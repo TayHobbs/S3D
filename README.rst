@@ -15,6 +15,11 @@ Current possible command line arguements are:
     --bucket, -b, 'Name of the bucket to upload to'
     --directory, -d, 'Name of the directory where the files or folders you want to upload are stored'`
 
+Installable from pip:
+::
+
+   pip install S3D
+
 Upload
 ------
 
