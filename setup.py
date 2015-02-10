@@ -13,8 +13,8 @@ setup(
     install_requires=['boto'],
     entry_points={
         'console_scripts': {
-            's3deploy = s3deploy.script:upload',
-            's3delete = s3deploy.script:delete',
+            's3deploy = s3d.script:upload',
+            's3delete = s3d.script:delete',
         },
     },
 )

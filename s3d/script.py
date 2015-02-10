@@ -1,5 +1,6 @@
 import argparse
-from s3deploy import process_files, delete_bucket_contents
+from s3d.deploy import process_files
+from s3d.delete import delete_bucket_contents
 
 
 parser = argparse.ArgumentParser()
