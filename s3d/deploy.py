@@ -8,7 +8,7 @@ from s3d import connect
 
 def process_files(bucket_name, access_key, secret_key, source_dir):
     bucket = connect(bucket_name, access_key, secret_key)
-    for (source, dirname, file_list) in os.walk(source_dir):
+    for (source, _, file_list) in os.walk(source_dir):
         source = '{}{}'.format(source, '/') if '/' not in source else source
 
         for file_name in file_list:
