@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='S3D',
-    version='1.0.0',
+    version='1.0.1',
     author='Taylor Hobbs',
     author_email='hobbstay@gmail.com.com',
     description='s3deploy',
