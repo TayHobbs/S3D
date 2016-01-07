@@ -65,10 +65,10 @@ the directory to delete from, and a list of files to ignore.
 
 if you pass both a list of files to ignore and a prefix, the prefix will
 be appended to all the files to ignore, otherwise these files will not be
-ignored and deleted anyway.  So if you want to ignore `important_file.txt`
-in the `stuff/` prefix but wish to delete everything else in the `stuff/` prefix,
-simply pass `-d stuff -i important_file.txt` to the command. The file to ignore will
-become `stuff/important_file.txt`.
+ignored and deleted anyway.  So if you want to ignore :code:`important_file.txt`
+in the :code:`stuff/` prefix but wish to delete everything else in the :code:`stuff/` prefix,
+simply pass :code:`-d stuff -i important_file.txt` to the command. The file to ignore will
+become :code:`stuff/important_file.txt`.
 
 Example usage of s3delete:
 
