@@ -58,9 +58,17 @@ Delete
 
 s3deploy also contains a delete command, s3delete.
 
-Currently this deletes the entire contents of your S3 bucket. It takes
-your aws access key, aws secret key, and the name of the bucket to
-delete from.
+This deletes the entire contents of your S3 bucket, unless you pass
+it a prefix or a list of files to ignore. It takes your aws access key,
+aws secret key, the name of the bucket to delete from, the prefix of
+the directory to delete from, and a list of files to ignore.
+
+if you pass both a list of files to ignore and a prefix, the prefix will
+be appended to all the files to ignore, otherwise these files will not be
+ignored and deleted anyway.  So if you want to ignore `important_file.txt`
+in the `stuff/` prefix but wish to delete everything else in the `stuff/` prefix,
+simply pass `-d stuff -i important_file.txt` to the command. The file to ignore will
+become `stuff/important_file.txt`.
 
 Example usage of s3delete:
 
