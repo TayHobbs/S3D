@@ -13,7 +13,7 @@ def process_files(bucket_name, access_key, secret_key, source_dir):
 
         for file_name in file_list:
             source_path = os.path.join(source, file_name)
-            print 'Uploading {}'.format(source_path)
+            print('Uploading {}'.format(source_path))
             upload_files(bucket, source_dir, source_path)
 
 

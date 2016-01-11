@@ -6,4 +6,4 @@ def delete_bucket_contents(bucket_name, access_key, secret_key, directory, ignor
     bucket = connect(bucket_name, access_key, secret_key)
     bucketListResultSet = bucket.list(directory)
     bucket.delete_keys([key.name for key in bucketListResultSet if key.name not in ignore_files])
-    print 'Bucket contents successfully deleted!'
+    print('Bucket contents successfully deleted!')

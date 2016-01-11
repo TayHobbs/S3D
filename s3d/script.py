@@ -17,7 +17,7 @@ def upload():
     if args.directory:
         process_files(args.bucket, args.access_key, args.secret_key, args.directory)
     else:
-        print 'You must supply a source directory'
+        print('You must supply a source directory')
 
 
 def delete():
