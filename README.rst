@@ -13,7 +13,8 @@ Current possible command line arguements are:
     --access-key, -a, 'AWS Access Key'
     --secret-key, -s, 'AWS Secret Key'
     --bucket, -b, 'Name of the bucket to upload to'
-    --directory, -d, 'Name of the directory where the files or folders you want to upload are stored'`
+    --ignore-files, -i 'List of files to ignore'
+    --directory, -d, 'Name of the directory where the files or folders you want to upload are stored or the prefix of the directory in the bucket to delete'
 
 Installable from pip:
 ::
@@ -62,13 +63,6 @@ This deletes the entire contents of your S3 bucket, unless you pass
 it a prefix or a list of files to ignore. It takes your aws access key,
 aws secret key, the name of the bucket to delete from, the prefix of
 the directory to delete from, and a list of files to ignore.
-
-if you pass both a list of files to ignore and a prefix, the prefix will
-be appended to all the files to ignore, otherwise these files will not be
-ignored and deleted anyway.  So if you want to ignore :code:`important_file.txt`
-in the :code:`stuff/` prefix but wish to delete everything else in the :code:`stuff/` prefix,
-simply pass :code:`-d stuff -i important_file.txt` to the command. The file to ignore will
-become :code:`stuff/important_file.txt`.
 
 Example usage of s3delete:
 
