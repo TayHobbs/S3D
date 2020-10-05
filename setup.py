@@ -10,7 +10,7 @@ setup(
     long_description=open('README.rst').read(),
     url='https://github.com/tayhobbs/s3deploy',
     packages=find_packages(exclude=['test']),
-    install_requires=['boto'],
+    install_requires=['boto==2.49.0'],
     entry_points={
         'console_scripts': {
             's3deploy = s3d.script:upload',
